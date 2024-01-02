@@ -1,0 +1,7 @@
+[package]
+name = "atto"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+atomic-wait = "1.1.0"
