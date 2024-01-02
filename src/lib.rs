@@ -68,7 +68,7 @@ impl<T> Sender<T> {
 
         // Insert element to queue only after checking for vacancy
         loop {
-            if cap > len + 1 {
+            if cap < len + 1 {
                 // wait for an update on the length
                 wait(&self.channel.length, cap);
                 len = self.channel.len();
